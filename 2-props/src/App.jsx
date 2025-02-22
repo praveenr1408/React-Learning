@@ -1,15 +1,12 @@
-import './App.css'
-import User from './components/user'
+import UserPage from "./components/UserPage";
 
 function App() {
-  const userData = {
-    name:'Praveen',
-    age:22
-  }
-  return <>
-      <User userData={userData}/>
-    </>
-  
+  return (
+    <div>
+      <UserPage name="Praveen" age={22} />
+      <UserPage /> {/* Uses defaultProps */}
+    </div>
+  );
 }
 
-export default App
+export default App;
